@@ -1,0 +1,33 @@
+{% extends "public/templates/public_template.html" %}
+
+{% block title %}Upload{% endblock %}
+
+{% block main %}
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+
+      <h1>Upload an Excel</h1>
+      <hr>
+
+      <form action="/upload-excel" method="POST" enctype="multipart/form-data">
+
+        <div class="form-group">
+          <label>Select Excel</label>
+          <div class="custom-file">
+            <input type="file" class="custom-file-input" name="excel" id="excel">
+            <label class="custom-file-label" for="excel"></label>
+          </div>
+        </div>
+        <p></p> <!-- 空格 -->
+        <button type="submit" class="btn btn-primary">Upload</button>
+        <button type="submit" formaction="/test" class="btn btn-info" style="margin-right: 5px; ">將總成績清零</button>
+
+      </form>
+
+    </div>
+  </div>
+</div>
+
+{% endblock %}
